@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TProcess.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,6 +79,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scada.Component.TGauge\Scada.Component.TGauge.csproj">
+      <Project>{631f78c1-9d51-4a20-95e8-4f47c9d3162f}</Project>
+      <Name>Scada.Component.TGauge</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scada.Data.DataList\Scada.Data.DataList.csproj">
+      <Project>{45134de2-5b94-4eee-804e-135529fb0cb5}</Project>
+      <Name>Scada.Data.DataList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scada.Data\Scada.Data.csproj">
+      <Project>{2b153ea3-a1c2-4471-8e8a-806fb9ca5f08}</Project>
+      <Name>Scada.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -56,5 +56,11 @@
       <DependentUpon>ScadaGauge.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scada.Data\Scada.Data.csproj">
+      <Project>{2B153EA3-A1C2-4471-8E8A-806FB9CA5F08}</Project>
+      <Name>Scada.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

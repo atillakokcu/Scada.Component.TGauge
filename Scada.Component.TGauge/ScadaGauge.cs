@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using Scada.Data;
 
 namespace Scada.Component.TGauge
 {
@@ -42,23 +43,23 @@ namespace Scada.Component.TGauge
         }
 
 
-        private string FDeviceName;
+        private TDevice FDevice;
 
-        public string DeviceName
+        public TDevice Device
         {
-            get { return GetDeviceName(); }
-            set { SetDeviceName(value); }
+            get { return GetDevice(); }
+            set { SetDevice (value); }
         }
 
-        private void SetDeviceName(string value)
+        private void SetDevice(TDevice value)
         {
-            FDeviceName = value;
-            LblName.Text = value;
+            FDevice = value;
+            LblName.Text = FDevice.DeviceName;
         }
 
-        private string GetDeviceName()
+        private TDevice GetDevice()
         {
-            return DeviceName;
+            return FDevice;
         }
 
         private int FmaxHeat;
