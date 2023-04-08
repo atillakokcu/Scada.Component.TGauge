@@ -14,7 +14,8 @@ namespace Scada.Component.TGauge
 {
     public partial class ScadaGauge : UserControl
     {
-        int Count = 0;
+       
+        
         private int FHeat;
 
         public int Heat
@@ -26,13 +27,14 @@ namespace Scada.Component.TGauge
         private void SetHeat(int value)
         {
             FHeat = value;
-            trackBar1.Value = FHeat;
+            LblHeat.Text = FHeat.ToString();
+            
 
             if (FHeat >= FmaxHeat)
             {
                 if (FAlarmAktive)
                 {
-                    timer1.Enabled= true;
+                    Blink();
                 }
             }
         }
@@ -102,26 +104,35 @@ namespace Scada.Component.TGauge
         public ScadaGauge()
         {
             InitializeComponent();
+            
+                CheckForIllegalCrossThreadCalls = false;
+
+            
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (Count > 20)
-            {
-                timer1.Enabled = false;
-            }
+       
 
-            if (LblName.BackColor == Color.Silver)
+        private void Blink()
+        {
+
+            Task.Run(() =>
             {
-                LblName.BackColor = Color.Red;
-                
-            }
-            else
-            {
-                LblName.BackColor = Color.Silver;
-            }
-            Count++;
-            
+                for (int i = 0; i < 20; i++)
+                {
+                    if (LblName.BackColor == Color.Silver)
+                    {
+                        LblName.BackColor = Color.Red;
+
+                    }
+                    else
+                    {
+                        LblName.BackColor = Color.Silver;
+                    }
+                    Thread.Sleep(50);
+                }
+
+
+            });
         }
     }
 }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.TxtCount = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BtnStart = new System.Windows.Forms.Button();
-            this.BtnStop = new System.Windows.Forms.Button();
-            this.TxtTime = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.TxtTime = new System.Windows.Forms.NumericUpDown();
+            this.BtnStop = new System.Windows.Forms.Button();
+            this.BtnStart = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtCount = new System.Windows.Forms.NumericUpDown();
+            this.PnlDevices = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtCount)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,39 +56,22 @@
             this.panel1.Size = new System.Drawing.Size(800, 49);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // label2
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 49);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 401);
-            this.panel2.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(270, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Süre";
             // 
-            // TxtCount
+            // TxtTime
             // 
-            this.TxtCount.Location = new System.Drawing.Point(155, 7);
-            this.TxtCount.Name = "TxtCount";
-            this.TxtCount.Size = new System.Drawing.Size(73, 20);
-            this.TxtCount.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Kaç Tank ile simüle edilsin?";
-            // 
-            // BtnStart
-            // 
-            this.BtnStart.Location = new System.Drawing.Point(418, 4);
-            this.BtnStart.Name = "BtnStart";
-            this.BtnStart.Size = new System.Drawing.Size(75, 23);
-            this.BtnStart.TabIndex = 2;
-            this.BtnStart.Text = "Başla";
-            this.BtnStart.UseVisualStyleBackColor = true;
+            this.TxtTime.Location = new System.Drawing.Point(305, 7);
+            this.TxtTime.Name = "TxtTime";
+            this.TxtTime.Size = new System.Drawing.Size(73, 20);
+            this.TxtTime.TabIndex = 4;
+            this.TxtTime.ValueChanged += new System.EventHandler(this.TxtTime_ValueChanged);
             // 
             // BtnStop
             // 
@@ -99,37 +82,55 @@
             this.BtnStop.Text = "Durdur";
             this.BtnStop.UseVisualStyleBackColor = true;
             // 
-            // TxtTime
+            // BtnStart
             // 
-            this.TxtTime.Location = new System.Drawing.Point(305, 7);
-            this.TxtTime.Name = "TxtTime";
-            this.TxtTime.Size = new System.Drawing.Size(73, 20);
-            this.TxtTime.TabIndex = 4;
-            this.TxtTime.ValueChanged += new System.EventHandler(this.TxtTime_ValueChanged);
+            this.BtnStart.Location = new System.Drawing.Point(418, 4);
+            this.BtnStart.Name = "BtnStart";
+            this.BtnStart.Size = new System.Drawing.Size(75, 23);
+            this.BtnStart.TabIndex = 2;
+            this.BtnStart.Text = "Başla";
+            this.BtnStart.UseVisualStyleBackColor = true;
+            this.BtnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Süre";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Kaç Tank ile simüle edilsin?";
+            // 
+            // TxtCount
+            // 
+            this.TxtCount.Location = new System.Drawing.Point(155, 7);
+            this.TxtCount.Name = "TxtCount";
+            this.TxtCount.Size = new System.Drawing.Size(73, 20);
+            this.TxtCount.TabIndex = 0;
+            // 
+            // PnlDevices
+            // 
+            this.PnlDevices.AutoScroll = true;
+            this.PnlDevices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlDevices.Location = new System.Drawing.Point(0, 49);
+            this.PnlDevices.Name = "PnlDevices";
+            this.PnlDevices.Size = new System.Drawing.Size(800, 401);
+            this.PnlDevices.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PnlDevices);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtCount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,7 +142,7 @@
         private System.Windows.Forms.Button BtnStart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown TxtCount;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel PnlDevices;
         private System.Windows.Forms.NumericUpDown TxtTime;
         private System.Windows.Forms.Label label2;
     }
