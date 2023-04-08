@@ -5,6 +5,12 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scada.Component.TGauge", "Scada.Component.TGauge\Scada.Component.TGauge.csproj", "{631F78C1-9D51-4A20-95E8-4F47C9D3162F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scada.Data", "Scada.Data\Scada.Data.csproj", "{2B153EA3-A1C2-4471-8E8A-806FB9CA5F08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scada.Data.DataList", "Scada.Data.DataList\Scada.Data.DataList.csproj", "{45134DE2-5B94-4EEE-804E-135529FB0CB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{2E135C48-2AE9-4F27-BA83-E487F23EE132}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{631F78C1-9D51-4A20-95E8-4F47C9D3162F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{631F78C1-9D51-4A20-95E8-4F47C9D3162F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{631F78C1-9D51-4A20-95E8-4F47C9D3162F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B153EA3-A1C2-4471-8E8A-806FB9CA5F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B153EA3-A1C2-4471-8E8A-806FB9CA5F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B153EA3-A1C2-4471-8E8A-806FB9CA5F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B153EA3-A1C2-4471-8E8A-806FB9CA5F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45134DE2-5B94-4EEE-804E-135529FB0CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45134DE2-5B94-4EEE-804E-135529FB0CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45134DE2-5B94-4EEE-804E-135529FB0CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45134DE2-5B94-4EEE-804E-135529FB0CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E135C48-2AE9-4F27-BA83-E487F23EE132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E135C48-2AE9-4F27-BA83-E487F23EE132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E135C48-2AE9-4F27-BA83-E487F23EE132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E135C48-2AE9-4F27-BA83-E487F23EE132}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

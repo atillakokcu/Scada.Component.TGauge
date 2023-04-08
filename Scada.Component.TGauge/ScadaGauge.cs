@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Scada.Component.TGauge
 {
     public partial class ScadaGauge : UserControl
     {
+        int Count = 0;
         private int FHeat;
 
         public int Heat
@@ -103,10 +105,22 @@ namespace Scada.Component.TGauge
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (true)
+            if (Count > 20)
             {
-
+                timer1.Enabled = false;
             }
+
+            if (LblName.BackColor == Color.Silver)
+            {
+                LblName.BackColor = Color.Red;
+                
+            }
+            else
+            {
+                LblName.BackColor = Color.Silver;
+            }
+            Count++;
+            
         }
     }
 }

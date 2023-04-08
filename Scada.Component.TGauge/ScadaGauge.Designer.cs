@@ -40,7 +40,7 @@
             // 
             // LblName
             // 
-            this.LblName.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.LblName.BackColor = System.Drawing.Color.Silver;
             this.LblName.Dock = System.Windows.Forms.DockStyle.Top;
             this.LblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LblName.Location = new System.Drawing.Point(0, 0);
